@@ -358,7 +358,9 @@ body.is-preload * {
     animation: float 6s ease-in-out infinite;
     z-index: 10;
     min-width: 120px;
+    max-width: 140px;
     transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
 .floating-card:nth-child(1) {
