@@ -939,12 +939,14 @@ body.is-preload * {
 @media (max-width: 1024px) and (min-width: 769px) {
     /* Move cards to lower section for tablet */
     .hero-image {
-        margin-top: 2rem;
+        margin: 2rem auto 4rem auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         min-height: auto;
+        max-width: 800px;
         padding: 0 2rem;
+        justify-content: center;
     }
 
     .floating-card {
