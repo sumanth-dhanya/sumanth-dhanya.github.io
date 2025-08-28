@@ -937,28 +937,28 @@ body.is-preload * {
 /* Tablet adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
     .floating-card:nth-child(1) {
-        top: 8%;
-        left: -8%;
+        top: 10%;
+        right: 20%;
     }
 
     .floating-card:nth-child(2) {
-        top: 20%;
-        right: -8%;
+        top: 28%;
+        right: -5%;
     }
 
     .floating-card:nth-child(3) {
         top: 50%;
-        left: -12%;
+        right: 40%;
     }
 
     .floating-card:nth-child(4) {
-        top: 78%;
-        left: 10%;
+        top: 70%;
+        right: 10%;
     }
 
     .floating-card:nth-child(5) {
-        top: 60%;
-        right: -12%;
+        top: 88%;
+        right: 30%;
     }
 
     .floating-card {
