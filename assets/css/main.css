@@ -1048,9 +1048,35 @@ body.is-preload * {
         text-align: center;
     }
 
-    .floating-card {
-        display: none;
+    /* Reposition floating cards for mobile - show in lower section */
+    .hero-image {
+        position: relative;
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        min-height: auto;
+        max-width: 100%;
+        padding: 0 1rem;
     }
+
+    .floating-card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0;
+        animation: none;
+        background: var(--background-card);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+    }
+
+    .floating-card:nth-child(1) { animation-delay: 0.1s; }
+    .floating-card:nth-child(2) { animation-delay: 0.2s; }
+    .floating-card:nth-child(3) { animation-delay: 0.3s; }
+    .floating-card:nth-child(4) { animation-delay: 0.4s; }
+    .floating-card:nth-child(5) { animation-delay: 0.5s; }
 }
 
 @media (max-width: 480px) {
