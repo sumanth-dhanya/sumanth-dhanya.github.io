@@ -73,6 +73,14 @@
 						<i class="fas fa-brain"></i>
 						<span>Business Intelligence</span>
 					</div>
+					<div class="floating-card">
+						<i class="fas fa-network-wired"></i>
+						<span>Deep Learning</span>
+					</div>
+					<div class="floating-card">
+						<i class="fas fa-project-diagram"></i>
+						<span>Operations Research</span>
+					</div>
 				</div>
 			</div>
 			<div class="scroll-indicator">
@@ -564,62 +572,147 @@
 			});
 
 			// Skill Progress Animation
-			const observerOptions = {
-				threshold: 0.7
-			};
+			function getObserverOptions() {
+				const isMobile = window.innerWidth <= 768;
+				return {
+					threshold: isMobile ? 0.3 : 0.5, // Lower threshold for mobile, moderate for desktop
+					rootMargin: isMobile ? '0px 0px -80px 0px' : '0px 0px -100px 0px'
+				};
+			}
+
+			// Track animated elements to prevent re-animation
+			const animatedElements = new Set();
 
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						const progressBars = entry.target.querySelectorAll('.skill-progress');
-						const statNumbers = entry.target.querySelectorAll('.stat-number');
+						const sectionId = entry.target.id || entry.target.className;
 
-						// Reset and animate skill bars
-						progressBars.forEach(bar => {
-							const skill = bar.getAttribute('data-skill');
-							bar.style.width = '0%';
-							setTimeout(() => {
-								bar.style.width = skill + '%';
-							}, 300);
-						});
+						// Only animate if not already animated
+						if (!animatedElements.has(sectionId)) {
+							const progressBars = entry.target.querySelectorAll('.skill-progress');
+							const statNumbers = entry.target.querySelectorAll('.stat-number');
 
-						// Reset and animate stat numbers
-						statNumbers.forEach(stat => {
-							const target = parseInt(stat.getAttribute('data-target'));
-							stat.textContent = '0';
-							let count = 0;
-							const increment = target / 30;
+							// Animate skill bars
+							progressBars.forEach((bar, index) => {
+								const skill = bar.getAttribute('data-skill');
+								if (!skill) return;
 
-							const timer = setInterval(() => {
-								count += increment;
-								if (count >= target) {
-									count = target;
-									clearInterval(timer);
-								}
-								stat.textContent = Math.ceil(count);
-							}, 50);
-						});
-					} else {
-						// Reset animations when leaving viewport
-						const progressBars = entry.target.querySelectorAll('.skill-progress');
-						const statNumbers = entry.target.querySelectorAll('.stat-number');
+								// Reset to 0 first
+								bar.style.width = '0%';
+								bar.style.transition = 'none';
 
-						progressBars.forEach(bar => {
-							bar.style.width = '0%';
-						});
+								// Force reflow to ensure 0% is applied
+								bar.offsetHeight;
 
-						statNumbers.forEach(stat => {
-							stat.textContent = '0';
-						});
+								// Add transition and animate
+								setTimeout(() => {
+									bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+									bar.style.width = skill + '%';
+								}, 100 + (index * 150)); // Stagger animation
+							});
+
+							// Animate stat numbers
+							statNumbers.forEach((stat, index) => {
+								const target = parseInt(stat.getAttribute('data-target'));
+								if (isNaN(target)) return;
+
+								// Start from 0
+								stat.textContent = '0';
+								let count = 0;
+								const duration = 2000; // 2 seconds
+								const increment = target / (duration / 50); // Update every 50ms
+								const delay = index * 300; // Stagger animation
+
+								setTimeout(() => {
+									const timer = setInterval(() => {
+										count += increment;
+										if (count >= target) {
+											count = target;
+											clearInterval(timer);
+										}
+										stat.textContent = Math.ceil(count);
+									}, 50);
+								}, delay);
+							});
+
+							// Mark as animated
+							animatedElements.add(sectionId);
+						}
 					}
 				});
-			}, observerOptions);
+			}, getObserverOptions());
 
 			// Observe skills and stats sections
 			const skillsSection = document.querySelector('.skills-section');
 			const aboutSection = document.querySelector('.about-section');
 			if (skillsSection) observer.observe(skillsSection);
 			if (aboutSection) observer.observe(aboutSection);
+
+			// Handle window resize - recreate observer with new options
+			let resizeTimeout;
+			window.addEventListener('resize', () => {
+				clearTimeout(resizeTimeout);
+				resizeTimeout = setTimeout(() => {
+					// Disconnect current observer
+					observer.disconnect();
+
+					// Create new observer with updated options
+					const newObserver = new IntersectionObserver((entries) => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								const sectionId = entry.target.id || entry.target.className;
+
+								// Force re-animation on resize if already animated
+								const progressBars = entry.target.querySelectorAll('.skill-progress');
+								const statNumbers = entry.target.querySelectorAll('.stat-number');
+
+								// Re-animate skill bars
+								progressBars.forEach((bar, index) => {
+									const skill = bar.getAttribute('data-skill');
+									if (!skill) return;
+
+									bar.style.width = '0%';
+									bar.style.transition = 'none';
+									bar.offsetHeight;
+
+									setTimeout(() => {
+										bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+										bar.style.width = skill + '%';
+									}, 100 + (index * 150));
+								});
+
+								// Re-animate stat numbers
+								statNumbers.forEach((stat, index) => {
+									const target = parseInt(stat.getAttribute('data-target'));
+									if (isNaN(target)) return;
+
+									stat.textContent = '0';
+									let count = 0;
+									const duration = 2000;
+									const increment = target / (duration / 50);
+									const delay = index * 300;
+
+									setTimeout(() => {
+										const timer = setInterval(() => {
+											count += increment;
+											if (count >= target) {
+												count = target;
+												clearInterval(timer);
+											}
+											stat.textContent = Math.ceil(count);
+										}, 50);
+									}, delay);
+								});
+							}
+						});
+					}, getObserverOptions());
+
+					// Re-observe sections
+					if (skillsSection) newObserver.observe(skillsSection);
+					if (aboutSection) newObserver.observe(aboutSection);
+				}, 250);
+			});
 
 			// Particles.js
 			if (typeof particlesJS !== 'undefined') {

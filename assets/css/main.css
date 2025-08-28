@@ -338,47 +338,91 @@ body.is-preload * {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 400px;
+    width: 100%;
+    overflow: visible;
+    max-width: 100%;
 }
 
 .floating-card {
     position: absolute;
-    background: var(--background-card);
-    padding: 1.5rem;
+    background: rgba(37, 37, 37, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 1.5rem;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-heavy);
+    border: 1px solid rgba(100, 255, 218, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     animation: float 6s ease-in-out infinite;
+    z-index: 10;
+    min-width: 120px;
+    max-width: 140px;
+    transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
 .floating-card:nth-child(1) {
-    top: 20%;
-    left: -10%;
+    top: 8%;
+    right: 20%;
     animation-delay: 0s;
+    z-index: 15;
 }
 
 .floating-card:nth-child(2) {
-    top: 50%;
-    right: -10%;
-    animation-delay: 2s;
+    top: 25%;
+    right: -8%;
+    animation-delay: 1s;
+    z-index: 14;
 }
 
 .floating-card:nth-child(3) {
-    bottom: 20%;
-    left: 10%;
+    top: 45%;
+    right: 45%;
+    animation-delay: 2s;
+    z-index: 13;
+}
+
+.floating-card:nth-child(4) {
+    top: 65%;
+    right: -2%;
+    animation-delay: 3s;
+    z-index: 12;
+}
+
+.floating-card:nth-child(5) {
+    top: 85%;
+    right: 30%;
     animation-delay: 4s;
+    z-index: 11;
+}
+
+.floating-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15);
+    border-color: var(--primary-color);
 }
 
 .floating-card i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.floating-card:hover i {
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .floating-card span {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+    transition: all 0.3s ease;
 }
 
 @keyframes float {
@@ -442,6 +486,8 @@ body.is-preload * {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    will-change: contents;
+    transition: color 0.3s ease;
     display: block;
 }
 
@@ -531,8 +577,9 @@ body.is-preload * {
     background: var(--gradient-primary);
     border-radius: 4px;
     width: 0;
-    transition: width 2s ease;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    will-change: width;
 }
 
 .skill-progress::before {
@@ -888,6 +935,43 @@ body.is-preload * {
     }
 }
 
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Move cards to lower section for tablet */
+    .hero-image {
+        margin: 2rem auto 4rem auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        min-height: auto;
+        max-width: 800px;
+        padding: 0 2rem;
+        justify-content: center;
+    }
+
+    .floating-card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0;
+        padding: 1rem 1.2rem;
+        min-width: 100px;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-card:nth-child(1) { animation-delay: 0s; }
+    .floating-card:nth-child(2) { animation-delay: 1s; }
+    .floating-card:nth-child(3) { animation-delay: 2s; }
+    .floating-card:nth-child(4) { animation-delay: 3s; }
+    .floating-card:nth-child(5) { animation-delay: 4s; }
+
+    .floating-card span {
+        font-size: 0.8rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -908,6 +992,11 @@ body.is-preload * {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .hero-section {
+        padding-top: 80px; /* Account for fixed navigation */
+        min-height: calc(100vh - 80px);
     }
 
     .hero-content {
@@ -964,14 +1053,117 @@ body.is-preload * {
         text-align: center;
     }
 
+    /* Reposition floating cards for mobile - show in lower section */
+    .hero-image {
+        position: relative;
+        margin: 4rem auto 5rem auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        min-height: auto;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
     .floating-card {
-        display: none;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0;
+        animation: none;
+        background: var(--background-card);
+        border: 1px solid rgba(100, 255, 218, 0.3);
+    }
+
+    .floating-card:nth-child(1) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.1s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(2) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(3) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(4) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(5) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 0 1rem;
+    }
+
+    /* Single column layout for small mobile */
+    .hero-image {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin: 3rem auto 6rem auto;
+        padding: 0 0.5rem;
+        max-width: 300px;
+    }
+
+    .floating-card {
+        padding: 1rem;
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .floating-card span {
+        font-size: 0.8rem;
+    }
+
+    /* Maintain fade-in animation for small mobile */
+    .floating-card:nth-child(1) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.1s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(2) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(3) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(4) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(5) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
     }
 
     .nav-container {
@@ -1015,6 +1207,27 @@ body.is-preload * {
 
     .btn {
         padding: 0.8rem 1.5rem;
+    }
+
+    /* Mobile animation optimizations */
+    .skill-progress {
+        transition: width 1s ease-out;
+        transform: translateZ(0); /* Hardware acceleration */
+    }
+
+    .stat-number {
+        font-size: 2rem; /* Smaller on mobile for better performance */
+        transform: translateZ(0); /* Hardware acceleration */
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        .skill-progress {
+            transition: none;
+        }
+        .stat-number {
+            transition: none;
+        }
     }
 }
 
