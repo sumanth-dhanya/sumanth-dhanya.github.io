@@ -1019,6 +1019,27 @@ body.is-preload * {
     .btn {
         padding: 0.8rem 1.5rem;
     }
+
+    /* Mobile animation optimizations */
+    .skill-progress {
+        transition: width 1s ease-out;
+        transform: translateZ(0); /* Hardware acceleration */
+    }
+
+    .stat-number {
+        font-size: 2rem; /* Smaller on mobile for better performance */
+        transform: translateZ(0); /* Hardware acceleration */
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        .skill-progress {
+            transition: none;
+        }
+        .stat-number {
+            transition: none;
+        }
+    }
 }
 
 /* Smooth scrolling enhancement */
