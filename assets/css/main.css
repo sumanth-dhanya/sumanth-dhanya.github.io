@@ -1051,7 +1051,7 @@ body.is-preload * {
     /* Reposition floating cards for mobile - show in lower section */
     .hero-image {
         position: relative;
-        margin-top: 3rem;
+        margin: 4rem auto 5rem auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
