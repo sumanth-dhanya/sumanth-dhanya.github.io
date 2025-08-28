@@ -937,35 +937,33 @@ body.is-preload * {
 
 /* Tablet adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .floating-card:nth-child(1) {
-        top: 10%;
-        right: 20%;
-    }
-
-    .floating-card:nth-child(2) {
-        top: 28%;
-        right: -5%;
-    }
-
-    .floating-card:nth-child(3) {
-        top: 50%;
-        right: 40%;
-    }
-
-    .floating-card:nth-child(4) {
-        top: 70%;
-        right: 10%;
-    }
-
-    .floating-card:nth-child(5) {
-        top: 88%;
-        right: 30%;
+    /* Move cards to lower section for tablet */
+    .hero-image {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        min-height: auto;
+        padding: 0 2rem;
     }
 
     .floating-card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0;
         padding: 1rem 1.2rem;
         min-width: 100px;
+        animation: float 6s ease-in-out infinite;
     }
+
+    .floating-card:nth-child(1) { animation-delay: 0s; }
+    .floating-card:nth-child(2) { animation-delay: 1s; }
+    .floating-card:nth-child(3) { animation-delay: 2s; }
+    .floating-card:nth-child(4) { animation-delay: 3s; }
+    .floating-card:nth-child(5) { animation-delay: 4s; }
 
     .floating-card span {
         font-size: 0.8rem;
