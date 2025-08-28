@@ -341,6 +341,7 @@ body.is-preload * {
     min-height: 400px;
     width: 100%;
     overflow: visible;
+    max-width: 100%;
 }
 
 .floating-card {
