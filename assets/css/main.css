@@ -531,8 +531,9 @@ body.is-preload * {
     background: var(--gradient-primary);
     border-radius: 4px;
     width: 0;
-    transition: width 2s ease;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    will-change: width;
 }
 
 .skill-progress::before {
