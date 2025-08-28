@@ -1,775 +1,820 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Sumath Dhanya | Portfolio</title>
-		<meta name="description" content="Portfolio of Sumath Dhanya - Software Engineer specializing in Statistics, Business Intelligence, Data Science and AI/ML methodologies.">
-		<meta name="keywords" content="Sumath Dhanya, Software Engineer, Portfolio, React, Full Stack Developer, Artificial Intelligence, LLM, AI, ML, Deeplearning, recomender systems.">
-		<meta name="author" content="Sumath Dhanya">
-        <meta name="google-site-verification" content="EgQWyC2q1SKjmjLFc4QAC74vJhGh9OOLpY2radcFv5Y" />
-		  
-		<!-- Social sharing (Open Graph / Twitter) -->
-		<meta property="og:title" content="Sumath Dhanya | Portfolio">
-		<meta property="og:description" content="Portfolio of Sumath Dhanya - Software Engineer specializing in Deeplearning and MLOps.">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://sumanth-dhanya.github.io">
-<!-- 		<meta property="og:image" content="https://sumanth-dhanya.github.io/preview.png"> -->
-		<meta name="twitter:card" content="summary_large_image">
-		
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Sumath Dhanya | Portfolio</title>
+    <meta name="description"
+          content="Portfolio of Sumath Dhanya - Software Engineer specializing in Statistics, Business Intelligence, Data Science and AI/ML methodologies.">
+    <meta name="keywords"
+          content="Sumath Dhanya, Software Engineer, Portfolio, React, Full Stack Developer, Artificial Intelligence, LLM, AI, ML, Deeplearning, recomender systems.">
+    <meta name="author" content="Sumath Dhanya">
+    <meta name="google-site-verification" content="EgQWyC2q1SKjmjLFc4QAC74vJhGh9OOLpY2radcFv5Y"/>
 
-		<!-- Loading Screen -->
-		<div id="loading-screen">
-			<div class="loader">
-				<div class="loader-circle"></div>
-				<div class="loader-text">Loading Portfolio...</div>
-			</div>
-		</div>
+    <!-- Social sharing (Open Graph / Twitter) -->
+    <meta property="og:title" content="Sumath Dhanya | Portfolio">
+    <meta property="og:description"
+          content="Portfolio of Sumath Dhanya - Software Engineer specializing in Deeplearning and MLOps.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sumanth-dhanya.github.io">
+    <!-- 		<meta property="og:image" content="https://sumanth-dhanya.github.io/preview.png"> -->
+    <meta name="twitter:card" content="summary_large_image">
 
-		<!-- Navigation -->
-		<nav class="main-nav">
-			<div class="nav-container">
-				<div class="nav-logo">
-					<span class="logo-text">SD</span>
-				</div>
-				<ul class="nav-menu">
-					<li><a href="#hero" class="nav-link">Home</a></li>
-					<li><a href="#about" class="nav-link">About</a></li>
-					<li><a href="#skills" class="nav-link">Skills</a></li>
-					<li><a href="#projects" class="nav-link">Projects</a></li>
-					<li><a href="#contact" class="nav-link">Contact</a></li>
-				</ul>
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</nav>
+    <!-- ✅ Structured Data (JSON-LD schema.org) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sumath Dhanya",
+            "url": "https://sumanth-dhanya.github.io",
+            "sameAs": [
+                "https://github.com/sumanth-dhanya",
+                "https://www.linkedin.com/in/YOUR-LINKEDIN-ID/",
+                "https://twitter.com/YOUR-HANDLE"
+            ],
+            "jobTitle": "Data Scientist",
+            "knowsAbout": [
+                "AI",
+                "ML",
+                "Deep Learning",
+                "MLOps",
+                "Business Intelligence",
+                "Full Stack Development"
+            ]
+        }
+    </script>
 
-		<!-- Hero Section -->
-		<section id="hero" class="hero-section">
-			<div id="particles-js"></div>
-			<div class="hero-content">
-				<div class="hero-text">
-					<h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
-						Hi, I'm <span class="accent-text">Sumanth D</span>
-					</h1>
-					<div class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">
-						<span class="typing-text"></span>
-						<span class="cursor">|</span>
-					</div>
-					<p class="hero-description" data-aos="fade-up" data-aos-delay="700">
-						Transforming data into actionable insights and driving business value through advanced analytics and AI/ML solutions.
-					</p>
-					<div class="hero-buttons" data-aos="fade-up" data-aos-delay="900">
-						<a href="#projects" class="btn btn-primary">View My Work</a>
-						<a href="#contact" class="btn btn-secondary">Get In Touch</a>
-					</div>
-				</div>
-				<div class="hero-image" data-aos="fade-left" data-aos-delay="600">
-					<div class="floating-card">
-						<i class="fas fa-chart-line"></i>
-						<span>Data Analysis</span>
-					</div>
-					<div class="floating-card">
-						<i class="fas fa-robot"></i>
-						<span>AI/ML</span>
-					</div>
-					<div class="floating-card">
-						<i class="fas fa-brain"></i>
-						<span>Business Intelligence</span>
-					</div>
-					<div class="floating-card">
-						<i class="fas fa-network-wired"></i>
-						<span>Deep Learning</span>
-					</div>
-					<div class="floating-card">
-						<i class="fas fa-project-diagram"></i>
-						<span>Operations Research</span>
-					</div>
-				</div>
-			</div>
-			<div class="scroll-indicator">
-				<div class="scroll-arrow"></div>
-			</div>
-		</section>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+</head>
+<body class="is-preload">
 
-		<!-- About Section -->
-		<section id="about" class="about-section">
-			<div class="container">
-				<div class="section-header" data-aos="fade-up">
-					<h2 class="section-title">About Me</h2>
-					<p class="section-subtitle">Passionate about turning complex data into simple solutions</p>
-				</div>
-				<div class="about-content">
-					<div class="about-text" data-aos="fade-right">
-						<p>I am a versatile Business Analyst and Data Scientist with a passion for enabling transformative change within enterprises. My expertise spans across business architecture, data analysis, AI/ML implementation, and strategic consulting.</p>
-						<p>With a strong analytical mindset and deep technical skills, I specialize in applying cutting-edge AI/ML techniques to solve complex business problems while communicating insights through compelling data narratives.</p>
-						<div class="stats-grid">
-							<div class="stat-item">
-								<div class="stat-number" data-target="50">0</div>
-								<div class="stat-label">Projects Completed</div>
-							</div>
-							<div class="stat-item">
-								<div class="stat-number" data-target="10">0</div>
-								<div class="stat-label">Years Experience</div>
-							</div>
-							<div class="stat-item">
-								<div class="stat-number" data-target="5">0</div>
-								<div class="stat-label">Companies</div>
-							</div>
-						</div>
-					</div>
-					<div class="about-visual" data-aos="fade-left">
-						<div class="tech-stack">
-							<div class="tech-item">Python</div>
-							<div class="tech-item">Machine Learning</div>
-							<div class="tech-item">TensorFlow</div>
-							<div class="tech-item">Pandas</div>
-							<div class="tech-item">SQL</div>
-							<div class="tech-item">AWS</div>
-							<div class="tech-item">Docker</div>
-							<div class="tech-item">Streamlit</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading Portfolio...</div>
+    </div>
+</div>
 
-		<!-- Skills Section -->
-		<section id="skills" class="skills-section">
-			<div class="container">
-				<div class="section-header" data-aos="fade-up">
-					<h2 class="section-title">Skills & Expertise</h2>
-					<p class="section-subtitle">Technical proficiencies and core competencies</p>
-				</div>
-				<div class="skills-grid">
-					<div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-						<div class="skill-icon">
-							<i class="fas fa-chart-bar"></i>
-						</div>
-						<h3>Data Analysis</h3>
-						<div class="skill-progress-container">
-							<div class="skill-progress" data-skill="95"></div>
-							<span class="skill-percentage">95%</span>
-						</div>
-						<p>Advanced statistical analysis, data mining, and big data processing</p>
-					</div>
-					<div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-						<div class="skill-icon">
-							<i class="fas fa-robot"></i>
-						</div>
-						<h3>Machine Learning</h3>
-						<div class="skill-progress-container">
-							<div class="skill-progress" data-skill="90"></div>
-							<span class="skill-percentage">90%</span>
-						</div>
-						<p>Deep learning, neural networks, and predictive modeling</p>
-					</div>
-					<div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-						<div class="skill-icon">
-							<i class="fas fa-briefcase"></i>
-						</div>
-						<h3>Business Analysis</h3>
-						<div class="skill-progress-container">
-							<div class="skill-progress" data-skill="88"></div>
-							<span class="skill-percentage">88%</span>
-						</div>
-						<p>Requirements analysis, process optimization, and strategic planning</p>
-					</div>
-					<div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-						<div class="skill-icon">
-							<i class="fas fa-tasks"></i>
-						</div>
-						<h3>Project Management</h3>
-						<div class="skill-progress-container">
-							<div class="skill-progress" data-skill="85"></div>
-							<span class="skill-percentage">85%</span>
-						</div>
-						<p>Agile methodologies, team leadership, and delivery management</p>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- Navigation -->
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="logo-text">SD</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
-		<!-- Projects Section -->
-		<section id="projects" class="projects-section">
-			<div class="container">
-				<div class="section-header" data-aos="fade-up">
-					<h2 class="section-title">Featured Projects</h2>
-					<p class="section-subtitle">Showcasing innovative solutions and technical excellence</p>
-				</div>
-				<div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
-					<button class="filter-btn active" data-filter="all">All Projects</button>
-					<button class="filter-btn" data-filter="ml">Machine Learning</button>
-					<button class="filter-btn" data-filter="web">Web Apps</button>
-					<button class="filter-btn" data-filter="analysis">Data Analysis</button>
-				</div>
-				<div class="projects-grid">
-					<div class="project-card ml" data-aos="fade-up" data-aos-delay="100">
-						<div class="project-image">
-							<img src="images/cnn-unsplash.jpg" alt="CNN Kidney Disease Classification">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://github.com/slackroo/kidney_disease_classification_deeplearning" class="project-link" target="_blank">
-										<i class="fab fa-github"></i>
-									</a>
-									<a href="#" class="project-link">
-										<i class="fas fa-external-link-alt"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">Deep Learning</span>
-								<span class="tag">MLFlow</span>
-								<span class="tag">Docker</span>
-							</div>
-							<h3 class="project-title">CNN Kidney Disease Classification</h3>
-							<p class="project-description">End-to-end CNN model for kidney disease classification with MLFlow tracking, DVC pipeline, and EC2 deployment using containerized ECR.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>TensorFlow</span>
-								<span>AWS</span>
-								<span>Docker</span>
-							</div>
-						</div>
-					</div>
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                Hi, I'm <span class="accent-text">Sumanth Dhanya</span>
+            </h1>
+            <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="700">
+                Transforming data into actionable insights and driving business value through advanced analytics and
+                AI/ML solutions.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="900">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+            <div class="floating-card">
+                <i class="fas fa-chart-line"></i>
+                <span>Data Analysis</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-robot"></i>
+                <span>AI/ML</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-brain"></i>
+                <span>Business Intelligence</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-network-wired"></i>
+                <span>Deep Learning</span>
+            </div>
+            <div class="floating-card">
+                <i class="fas fa-project-diagram"></i>
+                <span>Operations Research</span>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
 
-					<div class="project-card web" data-aos="fade-up" data-aos-delay="200">
-						<div class="project-image">
-							<img src="images/route_optimization.jpg" alt="Route Optimization">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://routeoptimization-gfkrscfeadhxtvdpynqq35.streamlit.app/" class="project-link" target="_blank">
-										<i class="fas fa-external-link-alt"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">Optimization</span>
-								<span class="tag">Streamlit</span>
-								<span class="tag">VRP</span>
-							</div>
-							<h3 class="project-title">Vehicle Route Optimization</h3>
-							<p class="project-description">Interactive Streamlit application for solving Vehicle Routing Problems with real-time optimization and visualization.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>Streamlit</span>
-								<span>Optimization</span>
-							</div>
-						</div>
-					</div>
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Passionate about turning complex data into simple solutions</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <p>I am a versatile Business Analyst and Data Scientist with a passion for enabling transformative
+                    change within enterprises. My expertise spans across business architecture, data analysis, AI/ML
+                    implementation, and strategic consulting.</p>
+                <p>With a strong analytical mindset and deep technical skills, I specialize in applying cutting-edge
+                    AI/ML techniques to solve complex business problems while communicating insights through compelling
+                    data narratives.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual" data-aos="fade-left">
+                <div class="tech-stack">
+                    <div class="tech-item">Python</div>
+                    <div class="tech-item">Machine Learning</div>
+                    <div class="tech-item">TensorFlow</div>
+                    <div class="tech-item">Pandas</div>
+                    <div class="tech-item">SQL</div>
+                    <div class="tech-item">AWS</div>
+                    <div class="tech-item">Docker</div>
+                    <div class="tech-item">Streamlit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-					<div class="project-card ml" data-aos="fade-up" data-aos-delay="300">
-						<div class="project-image">
-							<img src="images/hunter-harritt-Ype9sdOPdYc-unsplash.jpg" alt="Heart Disease Classification">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://slackroo-ml-ops-intro-develop-y9v1q4.streamlitapp.com/" class="project-link" target="_blank">
-										<i class="fas fa-external-link-alt"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">MLOps</span>
-								<span class="tag">Classification</span>
-								<span class="tag">Healthcare</span>
-							</div>
-							<h3 class="project-title">Heart Disease Prediction</h3>
-							<p class="project-description">End-to-end MLOps solution for predicting heart disease with automated pipeline and model deployment.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>Scikit-learn</span>
-								<span>MLOps</span>
-							</div>
-						</div>
-					</div>
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">Technical proficiencies and core competencies</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Data Analysis</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-skill="95"></div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+                <p>Advanced statistical analysis, data mining, and big data processing</p>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Machine Learning</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-skill="90"></div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <p>Deep learning, neural networks, and predictive modeling</p>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Business Analysis</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-skill="88"></div>
+                    <span class="skill-percentage">88%</span>
+                </div>
+                <p>Requirements analysis, process optimization, and strategic planning</p>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h3>Project Management</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-skill="85"></div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <p>Agile methodologies, team leadership, and delivery management</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-					<div class="project-card ml analysis" data-aos="fade-up" data-aos-delay="400">
-						<div class="project-image">
-							<img src="images/ml_pic.jpg" alt="Machine Learning Projects">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://github.com/slackroo/Machine_learning" class="project-link" target="_blank">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">ML Algorithms</span>
-								<span class="tag">Analysis</span>
-								<span class="tag">Research</span>
-							</div>
-							<h3 class="project-title">Machine Learning Showcase</h3>
-							<p class="project-description">Comprehensive collection of ML models covering classification, regression, forecasting, and fuzzy matching algorithms.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>Various ML</span>
-								<span>Research</span>
-							</div>
-						</div>
-					</div>
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing innovative solutions and technical excellence</p>
+        </div>
+        <div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="analysis">Data Analysis</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card ml" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="images/cnn-unsplash.jpg" alt="CNN Kidney Disease Classification">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/slackroo/kidney_disease_classification_deeplearning"
+                               class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">MLFlow</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <h3 class="project-title">CNN Kidney Disease Classification</h3>
+                    <p class="project-description">End-to-end CNN model for kidney disease classification with MLFlow
+                        tracking, DVC pipeline, and EC2 deployment using containerized ECR.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>AWS</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
 
-					<div class="project-card analysis" data-aos="fade-up" data-aos-delay="500">
-						<div class="project-image">
-							<img src="images/ds_yfinance.jpg" alt="Stock Forecasting">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://github.com/slackroo/yahoo_finance" class="project-link" target="_blank">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">Finance</span>
-								<span class="tag">Forecasting</span>
-								<span class="tag">Investment</span>
-							</div>
-							<h3 class="project-title">Stock Market Forecasting</h3>
-							<p class="project-description">Financial analysis and forecasting models for stock market predictions and portfolio optimization strategies.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>Finance</span>
-								<span>Forecasting</span>
-							</div>
-						</div>
-					</div>
+            <div class="project-card web" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="images/route_optimization.jpg" alt="Route Optimization">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://routeoptimization-gfkrscfeadhxtvdpynqq35.streamlit.app/"
+                               class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">VRP</span>
+                    </div>
+                    <h3 class="project-title">Vehicle Route Optimization</h3>
+                    <p class="project-description">Interactive Streamlit application for solving Vehicle Routing
+                        Problems with real-time optimization and visualization.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Optimization</span>
+                    </div>
+                </div>
+            </div>
 
-					<div class="project-card analysis" data-aos="fade-up" data-aos-delay="600">
-						<div class="project-image">
-							<img src="images/pic01.jpg" alt="A/B Testing">
-							<div class="project-overlay">
-								<div class="project-links">
-									<a href="https://github.com/slackroo/A-B-testing-data36-online-course" class="project-link" target="_blank">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-content">
-							<div class="project-tags">
-								<span class="tag">A/B Testing</span>
-								<span class="tag">Statistics</span>
-								<span class="tag">Optimization</span>
-							</div>
-							<h3 class="project-title">A/B Testing Analysis</h3>
-							<p class="project-description">Statistical analysis of A/B testing for online course pop-up promotions, measuring conversion rates and user engagement.</p>
-							<div class="project-tech">
-								<span>Python</span>
-								<span>Statistics</span>
-								<span>A/B Testing</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+            <div class="project-card ml" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="images/hunter-harritt-Ype9sdOPdYc-unsplash.jpg" alt="Heart Disease Classification">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://slackroo-ml-ops-intro-develop-y9v1q4.streamlitapp.com/"
+                               class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">MLOps</span>
+                        <span class="tag">Classification</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                    <h3 class="project-title">Heart Disease Prediction</h3>
+                    <p class="project-description">End-to-end MLOps solution for predicting heart disease with automated
+                        pipeline and model deployment.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>MLOps</span>
+                    </div>
+                </div>
+            </div>
 
-		<!-- Contact Section -->
-		<section id="contact" class="contact-section">
-			<div class="container">
-				<div class="section-header" data-aos="fade-up">
-					<h2 class="section-title">Let's Work Together</h2>
-					<p class="section-subtitle">Ready to transform your data into actionable insights?</p>
-				</div>
-				<div class="contact-content">
-					<div class="contact-info" data-aos="fade-right">
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-envelope"></i>
-							</div>
-							<div class="contact-details">
-								<h4>Email</h4>
-								<p>sumanthomgowda@gmail.com</p>
-							</div>
-						</div>
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-phone"></i>
-							</div>
-							<div class="contact-details">
-								<h4>Phone</h4>
-								<p>(+91) 9900-348-848</p>
-							</div>
-						</div>
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-map-marker-alt"></i>
-							</div>
-							<div class="contact-details">
-								<h4>Location</h4>
-								<p>Bangalore, Karnataka, India</p>
-							</div>
-						</div>
-						<div class="social-links">
-							<a href="https://github.com/sumanth-dhanya?tab=repositories" class="social-link" target="_blank">
-								<i class="fab fa-github"></i>
-							</a>
-							<a href="https://www.linkedin.com/in/sumanth-dhanya-8790a180/" class="social-link" target="_blank">
-								<i class="fab fa-linkedin"></i>
-							</a>
-						</div>
-					</div>
-					<div class="contact-form" data-aos="fade-left">
-					  <form 
-					    action="https://formspree.io/f/mzzazlol" 
-					    method="POST" 
-					    class="form"
-					  >
-					    <div class="form-group">
-					      <input type="text" name="name" class="form-input" placeholder="Your Name" required>
-					    </div>
-					    <div class="form-group">
-					      <input type="email" name="email" class="form-input" placeholder="Your Email" required>
-					    </div>
-					    <div class="form-group">
-					      <input type="text" name="subject" class="form-input" placeholder="Subject" required>
-					    </div>
-					    <div class="form-group">
-					      <textarea name="message" class="form-input" placeholder="Your Message" rows="5" required></textarea>
-					    </div>
-					
-					    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-					  </form>
-					</div>
+            <div class="project-card ml analysis" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="images/ml_pic.jpg" alt="Machine Learning Projects">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/slackroo/Machine_learning" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">ML Algorithms</span>
+                        <span class="tag">Analysis</span>
+                        <span class="tag">Research</span>
+                    </div>
+                    <h3 class="project-title">Machine Learning Showcase</h3>
+                    <p class="project-description">Comprehensive collection of ML models covering classification,
+                        regression, forecasting, and fuzzy matching algorithms.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Various ML</span>
+                        <span>Research</span>
+                    </div>
+                </div>
+            </div>
 
-				</div>
-			</div>
-		</section>
+            <div class="project-card analysis" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-image">
+                    <img src="images/ds_yfinance.jpg" alt="Stock Forecasting">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/slackroo/yahoo_finance" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">Finance</span>
+                        <span class="tag">Forecasting</span>
+                        <span class="tag">Investment</span>
+                    </div>
+                    <h3 class="project-title">Stock Market Forecasting</h3>
+                    <p class="project-description">Financial analysis and forecasting models for stock market
+                        predictions and portfolio optimization strategies.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Finance</span>
+                        <span>Forecasting</span>
+                    </div>
+                </div>
+            </div>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-text">
-						<p>&copy; 2025 Sumanth D. All rights reserved. Made with ❤️.</p>
-					</div>
-					<div class="footer-links">
-						<a href="#hero">Home</a>
-						<a href="#about">About</a>
-						<a href="#projects">Projects</a>
-						<a href="#contact">Contact</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+            <div class="project-card analysis" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image">
+                    <img src="images/pic01.jpg" alt="A/B Testing">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://github.com/slackroo/A-B-testing-data36-online-course" class="project-link"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">A/B Testing</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                    <h3 class="project-title">A/B Testing Analysis</h3>
+                    <p class="project-description">Statistical analysis of A/B testing for online course pop-up
+                        promotions, measuring conversion rates and user engagement.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Statistics</span>
+                        <span>A/B Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-		<!-- Scripts -->
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			// Initialize AOS
-			AOS.init({
-				duration: 1000,
-				easing: 'ease-in-out-sine',
-				once: false,
-				offset: 120,
-				mirror: true
-			});
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Ready to transform your data into actionable insights?</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info" data-aos="fade-right">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>sumanthomgowda@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p>(+91) 9900-348-848</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p>Bangalore, Karnataka, India</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/sumanth-dhanya?tab=repositories" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sumanth-dhanya-8790a180/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form" data-aos="fade-left">
+                <form
+                        action="https://formspree.io/f/mzzazlol"
+                        method="POST"
+                        class="form"
+                >
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-input" placeholder="Your Message" rows="5"
+                                  required></textarea>
+                    </div>
 
-			// Loading Screen
-			window.addEventListener('load', function() {
-				setTimeout(function() {
-					document.getElementById('loading-screen').style.opacity = '0';
-					setTimeout(function() {
-						document.getElementById('loading-screen').style.display = 'none';
-						document.body.classList.remove('is-preload');
-					}, 500);
-				}, 1500);
-			});
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
 
-			// Typing Animation
-			const phrases = [
-				"Data Scientist",
-				"Business Analyst", 
-				"ML Engineer",
-				"AI Specialist"
-			];
-			
-			let phraseIndex = 0;
-			let charIndex = 0;
-			let isDeleting = false;
-			const typingElement = document.querySelector('.typing-text');
-			
-			function typeAnimation() {
-				const currentPhrase = phrases[phraseIndex];
-				
-				if (isDeleting) {
-					typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
-					charIndex--;
-				} else {
-					typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
-					charIndex++;
-				}
-				
-				let typeSpeed = isDeleting ? 50 : 100;
-				
-				if (!isDeleting && charIndex === currentPhrase.length) {
-					typeSpeed = 2000;
-					isDeleting = true;
-				} else if (isDeleting && charIndex === 0) {
-					isDeleting = false;
-					phraseIndex = (phraseIndex + 1) % phrases.length;
-					typeSpeed = 500;
-				}
-				
-				setTimeout(typeAnimation, typeSpeed);
-			}
-			
-			setTimeout(typeAnimation, 1000);
+        </div>
+    </div>
+</section>
 
-			// Smooth Scrolling
-			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-				anchor.addEventListener('click', function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute('href'));
-					if (target) {
-						target.scrollIntoView({
-							behavior: 'smooth',
-							block: 'start'
-						});
-					}
-				});
-			});
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2025 Sumanth D. All rights reserved. Made with ❤️.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-			// Navigation
-			const hamburger = document.querySelector('.hamburger');
-			const navMenu = document.querySelector('.nav-menu');
-			
-			hamburger.addEventListener('click', () => {
-				hamburger.classList.toggle('active');
-				navMenu.classList.toggle('active');
-			});
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out-sine',
+        once: false,
+        offset: 120,
+        mirror: true
+    });
 
-			// Close menu when clicking on link
-			document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-				hamburger.classList.remove('active');
-				navMenu.classList.remove('active');
-			}));
+    // Loading Screen
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            document.getElementById('loading-screen').style.opacity = '0';
+            setTimeout(function () {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.body.classList.remove('is-preload');
+            }, 500);
+        }, 1500);
+    });
 
-			// Project Filtering
-			const filterBtns = document.querySelectorAll('.filter-btn');
-			const projectCards = document.querySelectorAll('.project-card');
+    // Typing Animation
+    const phrases = [
+        "Data Scientist",
+        "Business Analyst",
+        "ML Engineer",
+        "AI Specialist"
+    ];
 
-			filterBtns.forEach(btn => {
-				btn.addEventListener('click', () => {
-					// Remove active class from all buttons
-					filterBtns.forEach(b => b.classList.remove('active'));
-					// Add active class to clicked button
-					btn.classList.add('active');
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.querySelector('.typing-text');
 
-					const filter = btn.getAttribute('data-filter');
+    function typeAnimation() {
+        const currentPhrase = phrases[phraseIndex];
 
-					projectCards.forEach(card => {
-						if (filter === 'all' || card.classList.contains(filter)) {
-							card.style.display = 'block';
-							card.style.animation = 'fadeInUp 0.5s ease forwards';
-						} else {
-							card.style.display = 'none';
-						}
-					});
-				});
-			});
+        if (isDeleting) {
+            typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
 
-			// Skill Progress Animation
-			function getObserverOptions() {
-				const isMobile = window.innerWidth <= 768;
-				return {
-					threshold: isMobile ? 0.3 : 0.5, // Lower threshold for mobile, moderate for desktop
-					rootMargin: isMobile ? '0px 0px -80px 0px' : '0px 0px -100px 0px'
-				};
-			}
+        let typeSpeed = isDeleting ? 50 : 100;
 
-			// Track animated elements to prevent re-animation
-			const animatedElements = new Set();
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typeSpeed = 500;
+        }
 
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						const sectionId = entry.target.id || entry.target.className;
+        setTimeout(typeAnimation, typeSpeed);
+    }
 
-						// Only animate if not already animated
-						if (!animatedElements.has(sectionId)) {
-							const progressBars = entry.target.querySelectorAll('.skill-progress');
-							const statNumbers = entry.target.querySelectorAll('.stat-number');
+    setTimeout(typeAnimation, 1000);
 
-							// Animate skill bars
-							progressBars.forEach((bar, index) => {
-								const skill = bar.getAttribute('data-skill');
-								if (!skill) return;
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
-								// Reset to 0 first
-								bar.style.width = '0%';
-								bar.style.transition = 'none';
+    // Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
 
-								// Force reflow to ensure 0% is applied
-								bar.offsetHeight;
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
 
-								// Add transition and animate
-								setTimeout(() => {
-									bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
-									bar.style.width = skill + '%';
-								}, 100 + (index * 150)); // Stagger animation
-							});
+    // Close menu when clicking on link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }));
 
-							// Animate stat numbers
-							statNumbers.forEach((stat, index) => {
-								const target = parseInt(stat.getAttribute('data-target'));
-								if (isNaN(target)) return;
+    // Project Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
 
-								// Start from 0
-								stat.textContent = '0';
-								let count = 0;
-								const duration = 2000; // 2 seconds
-								const increment = target / (duration / 50); // Update every 50ms
-								const delay = index * 300; // Stagger animation
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
 
-								setTimeout(() => {
-									const timer = setInterval(() => {
-										count += increment;
-										if (count >= target) {
-											count = target;
-											clearInterval(timer);
-										}
-										stat.textContent = Math.ceil(count);
-									}, 50);
-								}, delay);
-							});
+            const filter = btn.getAttribute('data-filter');
 
-							// Mark as animated
-							animatedElements.add(sectionId);
-						}
-					}
-				});
-			}, getObserverOptions());
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
 
-			// Observe skills and stats sections
-			const skillsSection = document.querySelector('.skills-section');
-			const aboutSection = document.querySelector('.about-section');
-			if (skillsSection) observer.observe(skillsSection);
-			if (aboutSection) observer.observe(aboutSection);
+    // Skill Progress Animation
+    function getObserverOptions() {
+        const isMobile = window.innerWidth <= 768;
+        return {
+            threshold: isMobile ? 0.3 : 0.5, // Lower threshold for mobile, moderate for desktop
+            rootMargin: isMobile ? '0px 0px -80px 0px' : '0px 0px -100px 0px'
+        };
+    }
 
-			// Handle window resize - recreate observer with new options
-			let resizeTimeout;
-			window.addEventListener('resize', () => {
-				clearTimeout(resizeTimeout);
-				resizeTimeout = setTimeout(() => {
-					// Disconnect current observer
-					observer.disconnect();
+    // Track animated elements to prevent re-animation
+    const animatedElements = new Set();
 
-					// Create new observer with updated options
-					const newObserver = new IntersectionObserver((entries) => {
-						entries.forEach(entry => {
-							if (entry.isIntersecting) {
-								const sectionId = entry.target.id || entry.target.className;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id || entry.target.className;
 
-								// Force re-animation on resize if already animated
-								const progressBars = entry.target.querySelectorAll('.skill-progress');
-								const statNumbers = entry.target.querySelectorAll('.stat-number');
+                // Only animate if not already animated
+                if (!animatedElements.has(sectionId)) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
 
-								// Re-animate skill bars
-								progressBars.forEach((bar, index) => {
-									const skill = bar.getAttribute('data-skill');
-									if (!skill) return;
+                    // Animate skill bars
+                    progressBars.forEach((bar, index) => {
+                        const skill = bar.getAttribute('data-skill');
+                        if (!skill) return;
 
-									bar.style.width = '0%';
-									bar.style.transition = 'none';
-									bar.offsetHeight;
+                        // Reset to 0 first
+                        bar.style.width = '0%';
+                        bar.style.transition = 'none';
 
-									setTimeout(() => {
-										bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
-										bar.style.width = skill + '%';
-									}, 100 + (index * 150));
-								});
+                        // Force reflow to ensure 0% is applied
+                        bar.offsetHeight;
 
-								// Re-animate stat numbers
-								statNumbers.forEach((stat, index) => {
-									const target = parseInt(stat.getAttribute('data-target'));
-									if (isNaN(target)) return;
+                        // Add transition and animate
+                        setTimeout(() => {
+                            bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                            bar.style.width = skill + '%';
+                        }, 100 + (index * 150)); // Stagger animation
+                    });
 
-									stat.textContent = '0';
-									let count = 0;
-									const duration = 2000;
-									const increment = target / (duration / 50);
-									const delay = index * 300;
+                    // Animate stat numbers
+                    statNumbers.forEach((stat, index) => {
+                        const target = parseInt(stat.getAttribute('data-target'));
+                        if (isNaN(target)) return;
 
-									setTimeout(() => {
-										const timer = setInterval(() => {
-											count += increment;
-											if (count >= target) {
-												count = target;
-												clearInterval(timer);
-											}
-											stat.textContent = Math.ceil(count);
-										}, 50);
-									}, delay);
-								});
-							}
-						});
-					}, getObserverOptions());
+                        // Start from 0
+                        stat.textContent = '0';
+                        let count = 0;
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 50); // Update every 50ms
+                        const delay = index * 300; // Stagger animation
 
-					// Re-observe sections
-					if (skillsSection) newObserver.observe(skillsSection);
-					if (aboutSection) newObserver.observe(aboutSection);
-				}, 250);
-			});
+                        setTimeout(() => {
+                            const timer = setInterval(() => {
+                                count += increment;
+                                if (count >= target) {
+                                    count = target;
+                                    clearInterval(timer);
+                                }
+                                stat.textContent = Math.ceil(count);
+                            }, 50);
+                        }, delay);
+                    });
 
-			// Particles.js
-			if (typeof particlesJS !== 'undefined') {
-				particlesJS('particles-js', {
-					particles: {
-						number: { value: 80, density: { enable: true, value_area: 800 } },
-						color: { value: '#64ffda' },
-						shape: { type: 'circle' },
-						opacity: { value: 0.5, random: false },
-						size: { value: 3, random: true },
-						line_linked: {
-							enable: true,
-							distance: 150,
-							color: '#64ffda',
-							opacity: 0.4,
-							width: 1
-						},
-						move: {
-							enable: true,
-							speed: 2,
-							direction: 'none',
-							random: false,
-							straight: false,
-							out_mode: 'out',
-							bounce: false
-						}
-					},
-					interactivity: {
-						detect_on: 'canvas',
-						events: {
-							onhover: { enable: true, mode: 'repulse' },
-							onclick: { enable: true, mode: 'push' },
-							resize: true
-						}
-					},
-					retina_detect: true
-				});
-			}
-		</script>
-	</body>
+                    // Mark as animated
+                    animatedElements.add(sectionId);
+                }
+            }
+        });
+    }, getObserverOptions());
+
+    // Observe skills and stats sections
+    const skillsSection = document.querySelector('.skills-section');
+    const aboutSection = document.querySelector('.about-section');
+    if (skillsSection) observer.observe(skillsSection);
+    if (aboutSection) observer.observe(aboutSection);
+
+    // Handle window resize - recreate observer with new options
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Disconnect current observer
+            observer.disconnect();
+
+            // Create new observer with updated options
+            const newObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id || entry.target.className;
+
+                        // Force re-animation on resize if already animated
+                        const progressBars = entry.target.querySelectorAll('.skill-progress');
+                        const statNumbers = entry.target.querySelectorAll('.stat-number');
+
+                        // Re-animate skill bars
+                        progressBars.forEach((bar, index) => {
+                            const skill = bar.getAttribute('data-skill');
+                            if (!skill) return;
+
+                            bar.style.width = '0%';
+                            bar.style.transition = 'none';
+                            bar.offsetHeight;
+
+                            setTimeout(() => {
+                                bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                                bar.style.width = skill + '%';
+                            }, 100 + (index * 150));
+                        });
+
+                        // Re-animate stat numbers
+                        statNumbers.forEach((stat, index) => {
+                            const target = parseInt(stat.getAttribute('data-target'));
+                            if (isNaN(target)) return;
+
+                            stat.textContent = '0';
+                            let count = 0;
+                            const duration = 2000;
+                            const increment = target / (duration / 50);
+                            const delay = index * 300;
+
+                            setTimeout(() => {
+                                const timer = setInterval(() => {
+                                    count += increment;
+                                    if (count >= target) {
+                                        count = target;
+                                        clearInterval(timer);
+                                    }
+                                    stat.textContent = Math.ceil(count);
+                                }, 50);
+                            }, delay);
+                        });
+                    }
+                });
+            }, getObserverOptions());
+
+            // Re-observe sections
+            if (skillsSection) newObserver.observe(skillsSection);
+            if (aboutSection) newObserver.observe(aboutSection);
+        }, 250);
+    });
+
+    // Particles.js
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            particles: {
+                number: {value: 80, density: {enable: true, value_area: 800}},
+                color: {value: '#64ffda'},
+                shape: {type: 'circle'},
+                opacity: {value: 0.5, random: false},
+                size: {value: 3, random: true},
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#64ffda',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {enable: true, mode: 'repulse'},
+                    onclick: {enable: true, mode: 'push'},
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    }
+</script>
+</body>
 </html>
