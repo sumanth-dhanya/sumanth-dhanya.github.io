@@ -387,7 +387,7 @@ body.is-preload * {
 
 .floating-card:nth-child(4) {
     top: 65%;
-    right: 2%;
+    right: -2%;
     animation-delay: 3s;
     z-index: 12;
 }
