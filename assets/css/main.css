@@ -1082,6 +1082,24 @@ body.is-preload * {
         padding: 0 1rem;
     }
 
+    /* Single column layout for small mobile */
+    .hero-image {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .floating-card {
+        padding: 1rem;
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .floating-card span {
+        font-size: 0.8rem;
+    }
+
     .nav-container {
         padding: 0 1rem;
     }
