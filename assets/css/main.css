@@ -1070,11 +1070,42 @@ body.is-preload * {
         border: 1px solid rgba(100, 255, 218, 0.3);
     }
 
-    .floating-card:nth-child(1) { animation-delay: 0.1s; }
-    .floating-card:nth-child(2) { animation-delay: 0.2s; }
-    .floating-card:nth-child(3) { animation-delay: 0.3s; }
-    .floating-card:nth-child(4) { animation-delay: 0.4s; }
-    .floating-card:nth-child(5) { animation-delay: 0.5s; }
+    .floating-card:nth-child(1) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.1s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(2) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(3) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(4) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+    .floating-card:nth-child(5) {
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
 
 @media (max-width: 480px) {
