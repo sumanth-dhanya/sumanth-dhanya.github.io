@@ -163,7 +163,7 @@ Feel free to fork this project and customize it for your own portfolio!
 - **Email**: sumanthomgowda@gmail.com
 - **Phone**: (+91) 9900-348-848
 - **LinkedIn**: [Sumanth Dhanya](https://www.linkedin.com/in/sumanth-dhanya-8790a180/)
-- **GitHub**: [slackroo](https://github.com/slackroo)
+- **GitHub**: [slackroo](https://github.com/sumanth-dhanya)
 
 ---
 
