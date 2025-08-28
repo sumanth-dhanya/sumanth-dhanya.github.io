@@ -1,0 +1,39 @@
+# GitHub Pages Configuration
+title: "Sumanth D - Portfolio"
+description: "Data Scientist & Business Analyst Portfolio"
+baseurl: ""
+url: "https://slackroo.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - LICENSE.txt
+  - .gitignore
+  - assets/sass/
+
+# Include files
+include:
+  - .htaccess
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO Settings
+author: "Sumanth D"
+twitter_username: 
+github_username: slackroo
+linkedin_username: sumanth-dhanya-8790a180
+
+# Analytics (optional)
+google_analytics: 
+
+# Site settings
+timezone: Asia/Kolkata
+encoding: UTF-8
