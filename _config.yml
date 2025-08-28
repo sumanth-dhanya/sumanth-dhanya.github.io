@@ -2,7 +2,7 @@
 title: "Sumanth D - Portfolio"
 description: "Data Scientist & Business Analyst Portfolio"
 baseurl: ""
-url: "https://slackroo.github.io"
+url: "https://sumanth-dhanya.github.io"
 
 # Build settings
 markdown: kramdown
@@ -28,8 +28,8 @@ plugins:
 # SEO Settings
 author: "Sumanth D"
 twitter_username: 
-github_username: slackroo
-linkedin_username: sumanth-dhanya-8790a180
+github_username: sumanth-dhanya
+linkedin_username: sumanth-dhanya
 
 # Analytics (optional)
 google_analytics: 
