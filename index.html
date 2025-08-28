@@ -574,17 +574,19 @@
 						const progressBars = entry.target.querySelectorAll('.skill-progress');
 						const statNumbers = entry.target.querySelectorAll('.stat-number');
 
-						// Animate skill bars
+						// Reset and animate skill bars
 						progressBars.forEach(bar => {
 							const skill = bar.getAttribute('data-skill');
+							bar.style.width = '0%';
 							setTimeout(() => {
 								bar.style.width = skill + '%';
-							}, 500);
+							}, 300);
 						});
 
-						// Animate stat numbers
+						// Reset and animate stat numbers
 						statNumbers.forEach(stat => {
 							const target = parseInt(stat.getAttribute('data-target'));
+							stat.textContent = '0';
 							let count = 0;
 							const increment = target / 30;
 
@@ -597,8 +599,18 @@
 								stat.textContent = Math.ceil(count);
 							}, 50);
 						});
+					} else {
+						// Reset animations when leaving viewport
+						const progressBars = entry.target.querySelectorAll('.skill-progress');
+						const statNumbers = entry.target.querySelectorAll('.stat-number');
 
-						observer.unobserve(entry.target);
+						progressBars.forEach(bar => {
+							bar.style.width = '0%';
+						});
+
+						statNumbers.forEach(stat => {
+							stat.textContent = '0';
+						});
 					}
 				});
 			}, observerOptions);
