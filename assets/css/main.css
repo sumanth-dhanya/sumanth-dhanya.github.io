@@ -1124,8 +1124,9 @@ body.is-preload * {
     .hero-image {
         grid-template-columns: 1fr;
         gap: 0.8rem;
-        margin-top: 2rem;
+        margin: 3rem auto 6rem auto;
         padding: 0 0.5rem;
+        max-width: 300px;
     }
 
     .floating-card {
