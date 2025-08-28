@@ -564,54 +564,62 @@
 			});
 
 			// Skill Progress Animation
+			const isMobile = window.innerWidth <= 768;
 			const observerOptions = {
-				threshold: 0.7
+				threshold: isMobile ? 0.3 : 0.7, // Lower threshold for mobile
+				rootMargin: isMobile ? '0px 0px -100px 0px' : '0px 0px -50px 0px' // Trigger earlier on mobile
 			};
+
+			// Track animated elements to prevent re-animation
+			const animatedElements = new Set();
 
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						const progressBars = entry.target.querySelectorAll('.skill-progress');
-						const statNumbers = entry.target.querySelectorAll('.stat-number');
+						const sectionId = entry.target.id || entry.target.className;
 
-						// Reset and animate skill bars
-						progressBars.forEach(bar => {
-							const skill = bar.getAttribute('data-skill');
-							bar.style.width = '0%';
-							setTimeout(() => {
-								bar.style.width = skill + '%';
-							}, 300);
-						});
+						// Only animate if not already animated
+						if (!animatedElements.has(sectionId)) {
+							const progressBars = entry.target.querySelectorAll('.skill-progress');
+							const statNumbers = entry.target.querySelectorAll('.stat-number');
 
-						// Reset and animate stat numbers
-						statNumbers.forEach(stat => {
-							const target = parseInt(stat.getAttribute('data-target'));
-							stat.textContent = '0';
-							let count = 0;
-							const increment = target / 30;
+							// Animate skill bars
+							progressBars.forEach((bar, index) => {
+								const skill = bar.getAttribute('data-skill');
+								bar.style.width = '0%';
+								bar.style.transition = 'width 1.5s ease-out';
+								setTimeout(() => {
+									bar.style.width = skill + '%';
+								}, 200 + (index * 100)); // Stagger animation
+							});
 
-							const timer = setInterval(() => {
-								count += increment;
-								if (count >= target) {
-									count = target;
-									clearInterval(timer);
-								}
-								stat.textContent = Math.ceil(count);
-							}, 50);
-						});
-					} else {
-						// Reset animations when leaving viewport
-						const progressBars = entry.target.querySelectorAll('.skill-progress');
-						const statNumbers = entry.target.querySelectorAll('.stat-number');
+							// Animate stat numbers
+							statNumbers.forEach((stat, index) => {
+								const target = parseInt(stat.getAttribute('data-target'));
+								if (isNaN(target)) return;
 
-						progressBars.forEach(bar => {
-							bar.style.width = '0%';
-						});
+								stat.textContent = '0';
+								let count = 0;
+								const increment = target / 60; // Slower animation
+								const delay = index * 200; // Stagger animation
 
-						statNumbers.forEach(stat => {
-							stat.textContent = '0';
-						});
+								setTimeout(() => {
+									const timer = setInterval(() => {
+										count += increment;
+										if (count >= target) {
+											count = target;
+											clearInterval(timer);
+										}
+										stat.textContent = Math.ceil(count);
+									}, 33); // ~30fps for smooth animation
+								}, delay);
+							});
+
+							// Mark as animated
+							animatedElements.add(sectionId);
+						}
 					}
+					// Remove reset logic to prevent flickering on mobile
 				});
 			}, observerOptions);
 
@@ -620,6 +628,13 @@
 			const aboutSection = document.querySelector('.about-section');
 			if (skillsSection) observer.observe(skillsSection);
 			if (aboutSection) observer.observe(aboutSection);
+
+			// Handle window resize for mobile detection
+			window.addEventListener('resize', () => {
+				if (window.innerWidth <= 768 !== isMobile) {
+					location.reload(); // Reload to reset mobile detection
+				}
+			});
 
 			// Particles.js
 			if (typeof particlesJS !== 'undefined') {
